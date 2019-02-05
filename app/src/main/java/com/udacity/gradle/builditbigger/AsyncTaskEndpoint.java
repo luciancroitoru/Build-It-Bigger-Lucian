@@ -2,6 +2,7 @@ package com.udacity.gradle.builditbigger;
 
 import android.content.Context;
 import android.os.AsyncTask;
+import android.util.Log;
 import android.util.Pair;
 import android.widget.Toast;
 
@@ -51,14 +52,13 @@ public class AsyncTaskEndpoint extends AsyncTask<Pair<Context, String>, Void, St
         try {
             return myApiService.sayJoke().execute().getData();
         } catch (IOException e) {
-            return e.getMessage();
+            Log.e("TAG", "error:", e);
+            return "";
         }
     }
 
-    //Also start a toast message with the joke
     @Override
     protected void onPostExecute(String result) {
         response.asyncResponse(result);
-        Toast.makeText(context, result, Toast.LENGTH_LONG).show();
     }
 }

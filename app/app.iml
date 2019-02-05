@@ -217,9 +217,5 @@
     <orderEntry type="library" name="Gradle: com.google.guava:guava-jdk5:17.0@jar" level="project" />
     <orderEntry type="module" module-name="lucandroidlibrary" />
     <orderEntry type="module" module-name="LucianJavaLibrary" />
-    <orderEntry type="module" module-name="lucandroidlibrary" />
-    <orderEntry type="module" module-name="LucianJavaLibrary" />
-    <orderEntry type="module" module-name="lucandroidlibrary" />
-    <orderEntry type="module" module-name="LucianJavaLibrary" />
   </component>
 </module>

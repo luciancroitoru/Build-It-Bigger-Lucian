@@ -7,6 +7,7 @@ import org.junit.Rule;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 
+import static android.support.test.espresso.action.ViewActions.click;
 import static android.support.test.espresso.assertion.ViewAssertions.matches;
 import static android.support.test.espresso.matcher.ViewMatchers.withId;
 import static android.support.test.espresso.matcher.ViewMatchers.withText;
@@ -21,6 +22,7 @@ public class AsyncTaskEndpointTest {
     //Test if the string which is retrieved by AsyncTask is non-empty
     @Test
     public void buttonRetrivesNonEmptyString() {
+        onView(withId(R.id.tell_joke_button)).perform(click());
         onView(withId(R.id.joke_text_view)).check(matches(not(withText(""))));
     }
 }
